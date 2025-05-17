@@ -16,8 +16,12 @@ import Hero from '../components/Hero';
 import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
 import CTA from '../components/CTA';
-import { motion } from 'framer-motion';
-import roofing from '/src/img/roofing1.jpeg';
+import { motion } from 'framer-motion';import roofing from '/src/img/roofing1.jpeg';
+import tiling from '/src/img/tiling1.jpeg';
+import roofing1 from '/src/img/roofing1.jpeg';
+import electrical from '/src/img/electrical-work.png';
+import wood3 from '/src/img/wood3.jpeg';
+import wood2 from '/src/img/wood2.jpeg';
 
 const HomePage: React.FC = () => {
   const services = [
@@ -44,37 +48,37 @@ const HomePage: React.FC = () => {
   ];
 
   const projects = [
-    {
-      title: 'Modern Home Extension',
-      category: 'Extensions',
-      imageUrl: roofing,
-    },
-    {
-      title: 'Luxury Bathroom Renovation',
-      category: 'Tiling',
-      imageUrl: '/src/img/tiling1.jpeg'
-    },
-    {
-      title: 'Complete Roof Replacement',
-      category: 'Roofing',
-      imageUrl: '/src/img/roofing1.jpeg'
-    },
-      {
-      title: 'Electrical Work',
-      category: 'Electrical',
-      imageUrl: '/src/img/electrical-work.png'
-    },
-     {
-      title: 'Wood Work',
-      category: 'Wood',
-      imageUrl: '/src/img/wood3.jpeg'
-    },
-     {
-      title: 'General Work',
-      category: 'General',
-      imageUrl: '/src/img/wood2.jpeg'
-    }
-  ];
+  {
+    title: 'Modern Home Extension',
+    category: 'Extensions',
+    imageUrl: roofing,
+  },
+  {
+    title: 'Luxury Bathroom Renovation',
+    category: 'Tiling',
+    imageUrl: tiling
+  },
+  {
+    title: 'Complete Roof Replacement',
+    category: 'Roofing',
+    imageUrl: roofing1
+  },
+  {
+    title: 'Electrical Work',
+    category: 'Electrical',
+    imageUrl: electrical
+  },
+  {
+    title: 'Wood Work',
+    category: 'Wood',
+    imageUrl: wood3
+  },
+  {
+    title: 'General Work',
+    category: 'General',
+    imageUrl: wood2
+  }
+];
 
 
   return (
