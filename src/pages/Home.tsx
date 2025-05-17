@@ -17,6 +17,7 @@ import ServiceCard from '../components/ServiceCard';
 import ProjectCard from '../components/ProjectCard';
 import CTA from '../components/CTA';
 import { motion } from 'framer-motion';
+import roofing from '../src/img/roofing1.jpeg';
 
 const HomePage: React.FC = () => {
   const services = [
@@ -46,7 +47,7 @@ const HomePage: React.FC = () => {
     {
       title: 'Modern Home Extension',
       category: 'Extensions',
-      imageUrl: '/src/img/extensions2.jpeg'
+      imageUrl: roofing,
     },
     {
       title: 'Luxury Bathroom Renovation',
