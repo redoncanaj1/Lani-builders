@@ -159,7 +159,7 @@ const HomePage: React.FC = () => {
       <section className="section bg-white">
         <div className="container">
           <div className="section-heading reveal">
-            <h2 className="mb-4">Our Construction Services</h2>
+            <h2 className="mb-4 pt-10">Our Construction Services</h2>
             <p className="text-neutral-600 max-w-2xl mx-auto mb-4">
               We offer a comprehensive range of construction services to meet all your building needs.
             </p>
@@ -188,7 +188,7 @@ const HomePage: React.FC = () => {
       <section className="section bg-neutral-50">
         <div className="container">
           <div className="section-heading reveal">
-            <h2 className="mb-4">Featured Projects</h2>
+            <h2 className="mb-4 pt-10">Featured Projects</h2>
             <p className="text-neutral-600 max-w-2xl mx-auto mb-4">
               Take a look at some of our recent construction projects showcasing our quality and expertise.
             </p>
