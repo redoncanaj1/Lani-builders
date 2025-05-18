@@ -11,6 +11,13 @@ import {
 } from 'lucide-react';
 import { motion } from 'framer-motion';
 
+// Import all service images
+import roofingImage from '/src/img/roofing4.jpeg';
+import extensionsImage from '/src/img/extensions6.jpeg';
+import tilingImage from '/src/img/tiling1.jpeg';
+import electricalImage from '/src/img/electrical4.jpeg';
+import woodworkImage from '/src/img/wood3.jpeg';
+
 const ServicesPage: React.FC = () => {
   const services = [
     {
@@ -25,7 +32,7 @@ const ServicesPage: React.FC = () => {
         'Guttering and fascia installation',
         'Roof inspections and surveys'
       ],
-      image: '/src/img/roofing4.jpeg'
+      image: roofingImage
     },
     {
       id: 'extensions',
@@ -39,7 +46,7 @@ const ServicesPage: React.FC = () => {
         'Garage conversions',
         'Planning and building regulations compliance'
       ],
-      image: '/src/img/extensions6.jpeg'
+      image: extensionsImage
     },
     {
       id: 'tiling',
@@ -53,7 +60,7 @@ const ServicesPage: React.FC = () => {
         'Tile repair and replacement',
         'Grouting and sealing services'
       ],
-      image: '/src/img/tiling1.jpeg'
+      image: tilingImage
     },
     {
       id: 'electrical',
@@ -67,24 +74,25 @@ const ServicesPage: React.FC = () => {
         'Installation of lighting fixtures',
         'Smart home electrical installations'
       ],
-      image: '/src/img/electrical4.jpeg'
+      image: electricalImage
     },
-   {
-  id: 'woodwork',
-  icon: <Wrench size={48} />,
-  title: 'Wood Work',
-  description: 'Precision craftsmanship in timber for both structural and aesthetic applications, combining traditional joinery techniques with modern engineering.',
-  features: [
-    'Structural timber framing and roofing',
-    'Hardwood flooring installations',
-    'Staircase design & construction',
-    'Doors, windows & architectural millwork',
-    'Decking & exterior wood structures',
-    'Period property restoration'
-  ],
-  image: '/src/img/wood3.jpeg'
-}
+    {
+      id: 'woodwork',
+      icon: <Wrench size={48} />,
+      title: 'Wood Work',
+      description: 'Precision craftsmanship in timber for both structural and aesthetic applications, combining traditional joinery techniques with modern engineering.',
+      features: [
+        'Structural timber framing and roofing',
+        'Hardwood flooring installations',
+        'Staircase design & construction',
+        'Doors, windows & architectural millwork',
+        'Decking & exterior wood structures',
+        'Period property restoration'
+      ],
+      image: woodworkImage
+    }
   ];
+
   return (
     <>
       <Hero 
@@ -122,6 +130,7 @@ const ServicesPage: React.FC = () => {
                         src={service.image} 
                         alt={service.title} 
                         className="w-full h-96 object-cover"
+                        loading="lazy"
                       />
                     </div>
                   </motion.div>
