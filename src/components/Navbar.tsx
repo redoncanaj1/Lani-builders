@@ -135,13 +135,23 @@ const Navbar: React.FC = () => {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              className="fixed inset-0 bg-white z-40 lg:hidden pt-20"
+              className="fixed inset-0 bg-white z-40 lg:hidden"
               initial="closed"
               animate="open"
               exit="closed"
               variants={mobileMenuVariants}
             >
-              <div className="flex flex-col items-center gap-6 p-6">
+              {/* Close Button - Fixed at top right */}
+              <button 
+                className="absolute top-4 right-4 p-2 focus:outline-none"
+                onClick={() => setIsOpen(false)}
+                aria-label="Close menu"
+              >
+                <X size={28} className="text-primary-600" />
+              </button>
+
+              {/* Menu Content - Centered */}
+              <div className="h-full flex flex-col items-center justify-center gap-8 p-6">
                 <NavLink to="/"
                   className={({ isActive }) => 
                     `text-xl font-medium text-primary-600 hover:text-accent-600 ${isActive ? 'font-semibold border-b-2 border-accent-600' : ''}`
@@ -178,8 +188,11 @@ const Navbar: React.FC = () => {
                   Contact
                 </NavLink>
                 
-                <div className="mt-6">
-                  <a href="tel:+447378402689" className="btn-primary flex items-center gap-2">
+                <div className="mt-8">
+                  <a 
+                    href="tel:+447378402689" 
+                    className="btn-primary flex items-center gap-2 px-6 py-3"
+                  >
                     <Phone size={18} />
                     <span>+447378402689</span>
                   </a>
